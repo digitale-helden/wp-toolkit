@@ -1,0 +1,32 @@
+{
+  "name": "digitale-helden/functions",
+  "description": "Common and sharable functions and helper",
+  "type": "library",
+  "keywords": [
+    "functions",
+    "helper"
+  ],
+  "license": "GPL",
+  "authors": [
+    {
+      "name": "setcooki",
+      "email": "set@cooki.me",
+      "homepage": "http://set.cooki.me"
+    }
+  ],
+  "config": {
+    "vendor-dir": "lib/vendor"
+  },
+  "require": {
+    "php": ">=5.6.1"
+  },
+  "require-dev": {
+    "apigen/apigen": "4.1.*"
+  },
+  "autoload": {
+    "files": [
+      "lib/functions.php"
+    ]
+  },
+  "minimum-stability": "stable"
+}
