@@ -31,7 +31,7 @@
   "autoload": {
     "src": {
       "psr-4": {
-        "DigitaleHelden\\": "src/"
+        "DigitaleHelden\\Toolkit": "src/"
       }
     },
     "files": [
