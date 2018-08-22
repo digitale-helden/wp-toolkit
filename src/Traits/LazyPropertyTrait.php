@@ -18,7 +18,7 @@ trait LazyPropertyTrait
    	 * @param bool $strict expects boolean flag for enable/disable property overloading
    	 * @return $this
    	 */
-   	public function set($name, $value = '__NULL__', $strict = true)
+   	public function set($name, $value = '__NULL__', $strict = false)
    	{
    		if((is_array($name) || is_object($name)) && $value === '__NULL__')
    		{
