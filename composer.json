@@ -32,6 +32,5 @@
     "files": [
       "lib/functions.php"
     ]
-  },
-  "minimum-stability": "stable"
+  }
 }
