@@ -31,7 +31,7 @@
   "autoload": {
     "files": ["lib/functions.php"],
     "psr-4": {
-      "DigitaleHelden\\Toolkit\\": "src/"
+      "DigitaleHelden\\": "src/"
     }
   }
 }
