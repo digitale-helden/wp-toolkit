@@ -29,6 +29,11 @@
     "apigen/apigen": "4.1.*"
   },
   "autoload": {
+    "src": {
+      "psr-4": {
+        "DigitaleHelden\\Toolkit\\": "src/"
+      }
+    },
     "files": [
       "lib/functions.php"
     ]
