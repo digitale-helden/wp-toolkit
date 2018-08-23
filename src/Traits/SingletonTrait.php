@@ -48,7 +48,7 @@ trait SingletonTrait
      */
     final private function __construct(...$args)
     {
-        $this->init($args);
+        call_user_func_array(array($this, 'init'), ((isset($args[0]) && is_array($args[0])) ? $args[0] : $args));
     }
 
 
