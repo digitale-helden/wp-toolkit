@@ -13,13 +13,17 @@ trait LazyPropertyTrait
    	 * argument which defaults to boolean true only properties will be set (assigned value) that already exists - no
    	 * overloading allowed. in case overloading use add() method
    	 *
-   	 * @param string|array $name expects property name or array of name => value pairs
+   	 * @param null|string|array $name expects property name or array of name => value pairs
    	 * @param string|mixed $value expects value to set
    	 * @param bool $strict expects boolean flag for enable/disable property overloading
    	 * @return $this
    	 */
-   	public function set($name, $value = '__NULL__', $strict = false)
+   	public function set($name = null, $value = '__NULL__', $strict = false)
    	{
+   	    if(is_null($name))
+        {
+            return $this;
+        }
    		if((is_array($name) || is_object($name)) && $value === '__NULL__')
    		{
    			foreach((array)$name as $key => $val)
@@ -27,7 +31,6 @@ trait LazyPropertyTrait
    				$this->set($key, $val);
    			}
    		}else{
-
    			if((bool)$strict)
    			{
    				if(array_key_exists((string)$name, get_object_vars($this))) $this->{(string)$name} = $value;
