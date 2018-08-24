@@ -18,10 +18,10 @@ if(!function_exists('dh_export_csv'))
         {
             ini_set('zlib.output_compression', 0);
         }
-
-        ob_flush();
-        while(@ob_end_clean());
-
+        if(ob_get_length() > 0)
+        {
+            while(@ob_end_clean());
+        }
         if(stripos($name, '.csv') === false)
         {
             $name = sprintf("%s.csv", trim($name));
