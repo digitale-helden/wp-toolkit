@@ -1,6 +1,6 @@
 <?php
 
-if(!function_exists('dh_csv_export'))
+if(!function_exists('dh_export_csv'))
 {
     /**
      * export/download csv data as string or array
@@ -11,7 +11,7 @@ if(!function_exists('dh_csv_export'))
      * @param string $enclosure expects the optional enclosure
      * @param string $escape_char expects the optional escape_char
      */
-    function dh_csv_export($data, $name, $delimiter = ",", $enclosure = '"', $escape_char = "\\")
+    function dh_export_csv($data, $name, $delimiter = ",", $enclosure = '"', $escape_char = "\\")
     {
         if(stripos($name, '.csv') === false)
         {
