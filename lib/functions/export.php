@@ -14,6 +14,13 @@ if(!function_exists('dh_export_csv'))
     function dh_export_csv($data, $name, $delimiter = ",", $enclosure = '"', $escape_char = "\\")
     {
         ini_set('display_errors', 0);
+        if(ini_get('zlib.output_compression'))
+        {
+            ini_set('zlib.output_compression', 0);
+        }
+
+        ob_flush();
+        while(@ob_end_clean());
 
         if(stripos($name, '.csv') === false)
         {
@@ -36,7 +43,7 @@ if(!function_exists('dh_export_csv'))
             }
             @fclose($output);
         }else if(is_file($data)){
-            echo (string)@file_get_contents($data);
+            readfile($data);
         }else{
             echo (string)$data;
         }
