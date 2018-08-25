@@ -18,7 +18,7 @@ if(!function_exists('dh_export_csv'))
         {
             ini_set('zlib.output_compression', 0);
         }
-        if(ob_list_handlers() > 0)
+        if(sizeof(ob_list_handlers()) > 0)
         {
             while(@ob_end_clean());
         }
