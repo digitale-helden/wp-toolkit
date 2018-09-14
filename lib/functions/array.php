@@ -14,6 +14,6 @@ if(!function_exists('dh_array_is_assoc'))
         {
             return false;
         }
-        return count(array_filter(array_keys($array), 'is_string')) > 0;
+        return (bool)(count(array_filter(array_keys($array), 'is_string')) > 0);
     }
 }
