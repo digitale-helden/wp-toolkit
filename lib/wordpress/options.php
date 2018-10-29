@@ -16,6 +16,10 @@ if(!function_exists('dh_option_as_object'))
     {
         $o = new \stdClass();
         $object = (object)get_option($option, new \stdClass());
+        if(dh_is_json($object))
+        {
+            $object = json_decode($object, false);
+        }
         if($path !== null)
         {
             $object = dh_object_get($object, $path, new \stdClass());
