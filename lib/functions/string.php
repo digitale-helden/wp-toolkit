@@ -24,4 +24,26 @@ if(!function_exists('dh_is_json'))
 
     	return (json_last_error() === JSON_ERROR_NONE);
     }
+
+
+    /**
+     * check if first argument is a serialized string
+     *
+     * @param mixed $mixed expects mixed data
+     * @return bool
+     */
+    function dh_is_serialized($mixed)
+    {
+        if(is_string($mixed))
+        {
+            if(function_exists('is_serialized'))
+            {
+                return is_serialized($mixed);
+            }else{
+                return (@unserialize($mixed) !== false);
+            }
+        }else{
+            return false;
+        }
+    }
 }
