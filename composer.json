@@ -1,5 +1,5 @@
 {
-  "name": "digitale-helden/toolkit",
+  "name": "digitale-helden/wp-toolkit",
   "description": "A collection of common used PHP helper classes and functions",
   "type": "library",
   "keywords": [
@@ -9,15 +9,17 @@
     "helper"
   ],
   "license": "MIT",
-  "authors": [{
-    "name": "setcooki",
-    "email": "set@cooki.me",
-    "homepage": "http://set.cooki.me"
-  }],
+  "authors": [
+    {
+      "name": "setcooki",
+      "email": "set@cooki.me",
+      "homepage": "http://set.cooki.me"
+    }
+  ],
   "support": {
-    "issues": "https://github.com/digitale-helden/toolkit/issues",
-    "wiki": "https://github.com/digitale-helden/toolkit/wiki",
-    "source": "https://github.com/digitale-helden/toolkit"
+    "issues": "https://github.com/digitale-helden/wp-toolkit/issues",
+    "wiki": "https://github.com/digitale-helden/wp-toolkit/wiki",
+    "source": "https://github.com/digitale-helden/wp-toolkit"
   },
   "config": {
     "vendor-dir": "lib/vendor"
@@ -29,7 +31,9 @@
     "apigen/apigen": "4.1.*"
   },
   "autoload": {
-    "files": ["lib/bootstrap.php"],
+    "files": [
+      "lib/bootstrap.php"
+    ],
     "psr-4": {
       "DigitaleHelden\\Toolkit\\": "src/"
     }
