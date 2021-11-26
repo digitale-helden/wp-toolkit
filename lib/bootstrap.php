@@ -11,3 +11,4 @@ require_once 'functions/require.php';
 
 //wordpress
 require_once 'wordpress/options.php';
+require_once 'wordpress/notice.php';
